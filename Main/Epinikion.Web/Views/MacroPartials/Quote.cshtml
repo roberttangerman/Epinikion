@@ -1,0 +1,19 @@
+﻿@using Umbraco.Web.Models
+@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+@{
+    var quote = Model.GetParameterValue<string>("quote");
+    var cite = Model.GetParameterValue<string>("cite");
+    var additional = Model.GetParameterValue<string>("additional");
+}
+
+<umbraco:Macro runat="server" language="cshtml">
+    <figure>
+        <blockquote class="blockquote">
+            <p>@Html.Raw(quote)</p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+            <cite title="@cite">@cite</cite>@additional
+        </figcaption>
+    </figure>
+</umbraco:Macro>

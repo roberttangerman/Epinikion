@@ -1,0 +1,26 @@
+@using Umbraco.Web.Models
+@inherits Umbraco.Web.Mvc.UmbracoViewPage
+
+@{
+    var homePage = Model.AncestorOrSelf<Home>();
+    var socialLinks = homePage.Value<IEnumerable<IPublishedElement>>("socialLinks");
+}
+
+<footer class="footer container">
+    <div class="row mt-2">
+        <div class="col-8">
+            <p class="my-2 text-start text-white"><small>&copy; @Umbraco.GetDictionaryValue("Footer.CopyrightName")</small></p>
+        </div>
+        <div class="col-4 text-end pt-1">
+            @foreach (IPublishedElement item in socialLinks)
+            {
+                var link = item.Value<Link>("link");
+                var iconClass = item.Value<string>("iconClass");
+                
+                <a href="@link.Url" target="@link.Target" rel="noopener noreferrer" class="btn btn-social social-icon button" data-abc="true">
+                    <i class="@iconClass btn-round"></i>
+                </a>    
+            }
+        </div>
+    </div>
+</footer>

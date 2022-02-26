@@ -1,0 +1,111 @@
+/* Declarations */
+
+@font-face {
+    font-family: "zephyrgrunge";
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+000-5FF;
+    src: url("/fonts/zephyr_grunge-webfont.woff2") format("woff2"),
+         url("/fonts/zephyr_grunge-webfont.woff") format("woff");
+}
+
+/* Main */
+
+body {
+    background-color: #03060f;
+    min-width: 100%;
+    min-height: 100%;
+    color: #f0eee7;
+}
+
+.background-img {
+    background-size: 1920px auto;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Header */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: zephyrgrunge;
+    color: red;
+}
+
+.header {
+    min-height: 700px;
+}
+
+/* Content */
+
+.content {
+    min-height: 800px;
+}
+
+blockquote p {
+    font-size: 1rem !important;
+}
+
+.blockquote-footer {
+    color: #908c90 !important;
+}
+
+.link-custom {
+    color: #908c90;
+}
+
+.link-custom:hover{
+    color: #f0eee7;
+}
+
+/* Footer */
+footer {
+    height: 100px;
+}
+
+.btn-social {
+    display: inline;
+    padding: 0;
+}
+
+.social-icon .fa {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px !important;
+    line-height: 1;
+    font-size: 20px;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    color: #fff;
+    background: none
+}
+
+.social-icon:hover .fa {
+    opacity: .8
+}
+
+.social-icon .fa-facebook {
+    background-color: #3b5998
+}
+
+.social-icon .fa-youtube {
+    background-color: #bb0000
+}
+
+.social-icon .fa-instagram {
+    background-color: #517fa4
+}
+
+.social-icon .fa-spotify {
+    background-color: #1db954;
+}
+
+.btn-round {
+    border-radius: 4px !important
+}
