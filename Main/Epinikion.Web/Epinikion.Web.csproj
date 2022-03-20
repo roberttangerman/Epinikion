@@ -1,4 +1,4 @@
-﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\UmbracoCms.8.17.2\build\UmbracoCms.props" Condition="Exists('..\packages\UmbracoCms.8.17.2\build\UmbracoCms.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -299,6 +299,25 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\Models\ood.flag" />
+    <Content Include="App_Plugins\Cookiebot\backoffice\cookiebot\domain.html" />
+    <Content Include="App_Plugins\Cookiebot\backoffice\cookiebot\domain\status.html" />
+    <Content Include="App_Plugins\Cookiebot\backoffice\cookiebot\settings.html" />
+    <Content Include="App_Plugins\Cookiebot\backoffice\cookiebot\settings\confirm.html" />
+    <Content Include="App_Plugins\Cookiebot\backoffice\cookiebot\settings\settings.html" />
+    <Content Include="App_Plugins\Cookiebot\css\cookiebot-font.css" />
+    <Content Include="App_Plugins\Cookiebot\css\cookiebot-status.css" />
+    <Content Include="App_Plugins\Cookiebot\fonts\Cookiebot.eot" />
+    <Content Include="App_Plugins\Cookiebot\fonts\Cookiebot.svg" />
+    <Content Include="App_Plugins\Cookiebot\fonts\Cookiebot.ttf" />
+    <Content Include="App_Plugins\Cookiebot\fonts\Cookiebot.woff" />
+    <Content Include="App_Plugins\Cookiebot\lang\en-US.xml" />
+    <Content Include="App_Plugins\Cookiebot\package.manifest" />
+    <Content Include="App_Plugins\Cookiebot\scripts\domain.controller.js" />
+    <Content Include="App_Plugins\Cookiebot\scripts\domain.resource.js" />
+    <Content Include="App_Plugins\Cookiebot\scripts\lib\angular-chart.min.js" />
+    <Content Include="App_Plugins\Cookiebot\scripts\lib\Chart.min.js" />
+    <Content Include="App_Plugins\Cookiebot\scripts\settings.controller.js" />
+    <Content Include="App_Plugins\Cookiebot\scripts\settings.resource.js" />
     <Content Include="config\grid.editors.config.js" />
     <Content Include="config\Lang\cs-CZ.user.xml" />
     <Content Include="config\Lang\da-DK.user.xml" />
@@ -328,6 +347,8 @@
     <Content Include="Views\Partials\footer.cshtml" />
     <Content Include="Views\Partials\Grid\Clean.cshtml" />
     <Content Include="Views\Partials\navigation.cshtml" />
+    <Content Include="Views\Partials\showsList.cshtml" />
+    <Content Include="Views\Shows.cshtml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -343,6 +364,9 @@
     <Compile Include="App_Data\Models\Member.generated.cs" />
     <Compile Include="App_Data\Models\Page404.generated.cs" />
     <Compile Include="App_Data\Models\SEocontrols.generated.cs" />
+    <Compile Include="App_Data\Models\Show.generated.cs" />
+    <Compile Include="App_Data\Models\ShowControls.generated.cs" />
+    <Compile Include="App_Data\Models\Shows.generated.cs" />
     <Compile Include="App_Data\Models\UmbracoMediaArticle.generated.cs" />
     <Compile Include="App_Data\Models\UmbracoMediaAudio.generated.cs" />
     <Compile Include="App_Data\Models\UmbracoMediaVectorGraphics.generated.cs" />

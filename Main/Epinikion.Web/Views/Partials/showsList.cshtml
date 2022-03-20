@@ -1,0 +1,46 @@
+﻿@inherits UmbracoViewPage
+
+@{
+    Shows shows = Model.Root().Descendants<Shows>().FirstOrDefault();
+    IEnumerable<Show> showItems = shows.Descendants<Show>()
+                                       .Where(a => a.IsVisible() && a.Date >= DateTime.Now)
+                                       .OrderBy(a => a.Date);
+
+    bool isShowsPage = shows.Id == Model.Id;
+    int numberOfItemsToShow = isShowsPage ? showItems.Count() : 5;
+
+    IEnumerable<Show> showItemsToShow = showItems.Take(numberOfItemsToShow);
+}
+
+<div class="row justify-content-center">
+    <div class="col-10">
+        <h2 class="display-3 text-center">@Umbraco.GetDictionaryValue("Shows.Header")</h2>
+
+        @if (showItems.Any())
+        {
+            <div class="list-group-flush border-top border-bottom border-light">
+                @foreach (Show show in showItemsToShow)
+                {
+                    <div class="list-group-item d-flex bg-transparent border-light p-4">
+                        <p class="flex-grow-1 py-2 m-0">
+                            @show.Date.ToString("dd-MM-yyyy")
+                            <span class="mx-4">-</span>
+                            <a class="link-custom" href="@(show.VenueLink.Url)" target="@(show.VenueLink.Target)">
+                                @show.VenueName
+                            </a>
+                            <span class="mx-4">-</span>
+                            <span class="text-uppercase">@show.City, @show.Country</span>
+                        </p>
+                        <a class="btn btn-outline-light" href="@(show.TicketsLink.Url)" target="@(show.TicketsLink.Target)">
+                            @Umbraco.GetDictionaryValue("Shows.Tickets")
+                        </a>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <p class="zephyrgrunge fs-1 text-center">@Umbraco.GetDictionaryValue("Shows.NoShows")</p>
+        }
+    </div>
+</div>

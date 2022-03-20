@@ -54,9 +54,18 @@ blockquote p {
 
 .link-custom {
     color: #908c90;
+    text-decoration: none;
 }
 
 .link-custom:hover{
+    color: #f0eee7;
+}
+
+.zephyrgrunge {
+    font-family: zephyrgrunge;
+}
+
+.list-group-item {
     color: #f0eee7;
 }
 
