@@ -66,24 +66,31 @@ namespace Umbraco.Web.PublishedModels
 		public virtual global::System.DateTime Date => global::Umbraco.Web.PublishedModels.ShowControls.GetDate(this);
 
 		///<summary>
+		/// Notes: Enter the name of the festival
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
+		[ImplementPropertyType("notes")]
+		public virtual string Notes => global::Umbraco.Web.PublishedModels.ShowControls.GetNotes(this);
+
+		///<summary>
+		/// Show link: Enter the link to the venue
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
+		[ImplementPropertyType("showLink")]
+		public virtual global::Umbraco.Web.Models.Link ShowLink => global::Umbraco.Web.PublishedModels.ShowControls.GetShowLink(this);
+
+		///<summary>
+		/// Venue or festival name: Enter the name of the venue
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
+		[ImplementPropertyType("showName")]
+		public virtual string ShowName => global::Umbraco.Web.PublishedModels.ShowControls.GetShowName(this);
+
+		///<summary>
 		/// Tickets link: Enter the link to the tickets
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
 		[ImplementPropertyType("ticketsLink")]
 		public virtual global::Umbraco.Web.Models.Link TicketsLink => global::Umbraco.Web.PublishedModels.ShowControls.GetTicketsLink(this);
-
-		///<summary>
-		/// Venue link: Enter the link to the venue
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
-		[ImplementPropertyType("venueLink")]
-		public virtual global::Umbraco.Web.Models.Link VenueLink => global::Umbraco.Web.PublishedModels.ShowControls.GetVenueLink(this);
-
-		///<summary>
-		/// Venue name: Enter the name of the venue
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
-		[ImplementPropertyType("venueName")]
-		public virtual string VenueName => global::Umbraco.Web.PublishedModels.ShowControls.GetVenueName(this);
 	}
 }

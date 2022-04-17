@@ -10,6 +10,15 @@
          url("/fonts/zephyr_grunge-webfont.woff") format("woff");
 }
 
+@font-face {
+    font-family: "castelar";
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+000-5FF;
+    src: url("/fonts/castelar.ttf") format("truetype");
+}
+
 /* Main */
 
 body {
@@ -36,6 +45,31 @@ h1, h2, h3, h4, h5, h6 {
 
 .header {
     min-height: 700px;
+    font-family: castelar;
+    font-size: 20px;
+    color: #f0eee7;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        margin: .5rem 1rem;
+    }
+
+    .navbar {
+        padding: 0 0;
+    }
+
+    .navbar-toggler {
+        margin: .5rem 1rem;
+    }
+    .navbar-collapse {
+        background-color:rgba(0, 0, 0, 0.2);
+    }
+}
+@media (min-width: 990px) {
+    .navbar-nav {
+        align-items: center;
+    }
 }
 
 /* Content */

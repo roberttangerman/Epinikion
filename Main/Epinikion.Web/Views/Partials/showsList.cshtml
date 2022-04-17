@@ -25,15 +25,24 @@
                         <p class="flex-grow-1 py-2 m-0">
                             @show.Date.ToString("dd-MM-yyyy")
                             <span class="mx-4">-</span>
-                            <a class="link-custom" href="@(show.VenueLink.Url)" target="@(show.VenueLink.Target)">
-                                @show.VenueName
+                            <a class="link-custom" href="@(show.ShowLink.Url)" target="@(show.ShowLink.Target)">
+                                @show.ShowName
                             </a>
                             <span class="mx-4">-</span>
                             <span class="text-uppercase">@show.City, @show.Country</span>
                         </p>
-                        <a class="btn btn-outline-light" href="@(show.TicketsLink.Url)" target="@(show.TicketsLink.Target)">
-                            @Umbraco.GetDictionaryValue("Shows.Tickets")
-                        </a>
+                        @if (show.TicketsLink != null)
+                        {
+                            <a class="btn btn-outline-light" href="@(show.TicketsLink.Url)" target="@(show.TicketsLink.Target)">
+                                @Umbraco.GetDictionaryValue("Shows.Tickets")
+                            </a>
+                        }
+                        else
+                        {
+                            <div class="btn btn-outline-light disabled">
+                                @Umbraco.GetDictionaryValue("Shows.FreeIncome")
+                            </div>
+                        }
                     </div>
                 }
             </div>

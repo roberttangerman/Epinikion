@@ -3,7 +3,7 @@
 @{
     var homePage = Model.AncestorOrSelf<Home>();
     IEnumerable<IPublishedContent> navItems = homePage.Children.Where(c => c.IsVisible());
-    
+
     var image = homePage.Value<IPublishedContent>("logo", fallback: Fallback.ToAncestors);
 
     var logoUrl = "";

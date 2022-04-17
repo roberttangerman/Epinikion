@@ -35,17 +35,21 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
 		global::System.DateTime Date { get; }
 
+		/// <summary>Notes</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
+		string Notes { get; }
+
+		/// <summary>Show link</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
+		global::Umbraco.Web.Models.Link ShowLink { get; }
+
+		/// <summary>Venue or festival name</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
+		string ShowName { get; }
+
 		/// <summary>Tickets link</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
 		global::Umbraco.Web.Models.Link TicketsLink { get; }
-
-		/// <summary>Venue link</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
-		global::Umbraco.Web.Models.Link VenueLink { get; }
-
-		/// <summary>Venue name</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
-		string VenueName { get; }
 	}
 
 	/// <summary>Show Controls</summary>
@@ -107,6 +111,39 @@ namespace Umbraco.Web.PublishedModels
 		public static global::System.DateTime GetDate(IShowControls that) => that.Value<global::System.DateTime>("date");
 
 		///<summary>
+		/// Notes: Enter the name of the festival
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
+		[ImplementPropertyType("notes")]
+		public virtual string Notes => GetNotes(this);
+
+		/// <summary>Static getter for Notes</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
+		public static string GetNotes(IShowControls that) => that.Value<string>("notes");
+
+		///<summary>
+		/// Show link: Enter the link to the venue
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
+		[ImplementPropertyType("showLink")]
+		public virtual global::Umbraco.Web.Models.Link ShowLink => GetShowLink(this);
+
+		/// <summary>Static getter for Show link</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
+		public static global::Umbraco.Web.Models.Link GetShowLink(IShowControls that) => that.Value<global::Umbraco.Web.Models.Link>("showLink");
+
+		///<summary>
+		/// Venue or festival name: Enter the name of the venue
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
+		[ImplementPropertyType("showName")]
+		public virtual string ShowName => GetShowName(this);
+
+		/// <summary>Static getter for Venue or festival name</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
+		public static string GetShowName(IShowControls that) => that.Value<string>("showName");
+
+		///<summary>
 		/// Tickets link: Enter the link to the tickets
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
@@ -116,27 +153,5 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Static getter for Tickets link</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
 		public static global::Umbraco.Web.Models.Link GetTicketsLink(IShowControls that) => that.Value<global::Umbraco.Web.Models.Link>("ticketsLink");
-
-		///<summary>
-		/// Venue link: Enter the link to the venue
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
-		[ImplementPropertyType("venueLink")]
-		public virtual global::Umbraco.Web.Models.Link VenueLink => GetVenueLink(this);
-
-		/// <summary>Static getter for Venue link</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
-		public static global::Umbraco.Web.Models.Link GetVenueLink(IShowControls that) => that.Value<global::Umbraco.Web.Models.Link>("venueLink");
-
-		///<summary>
-		/// Venue name: Enter the name of the venue
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
-		[ImplementPropertyType("venueName")]
-		public virtual string VenueName => GetVenueName(this);
-
-		/// <summary>Static getter for Venue name</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
-		public static string GetVenueName(IShowControls that) => that.Value<string>("venueName");
 	}
 }
