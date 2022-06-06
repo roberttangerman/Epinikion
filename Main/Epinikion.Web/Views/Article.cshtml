@@ -1,0 +1,16 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Umbraco.Web.PublishedModels.Article>
+@{
+    Layout = "Master.cshtml";
+    
+    var title = Model.Value<string>("title");
+    var publishingDate = Model.Value<DateTime>("publishingDate").ToString("dd-MM-yyyy");
+    var content = Model.Value<string>("content");
+}
+
+<div class="row justify-content-center">
+    <div class="col-12">
+        <h2 class="display-3 text-center">@title</h2>
+        <small class="text-center">@publishingDate</small>
+        <p>@Html.Raw(content)</p>
+    </div>
+</div>
