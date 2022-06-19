@@ -363,6 +363,7 @@
     <Compile Include="App_Data\Models\Folder.generated.cs" />
     <Compile Include="App_Data\Models\FooterControls.generated.cs" />
     <Compile Include="App_Data\Models\Home.generated.cs" />
+    <Compile Include="App_Data\Models\HomepageControls.generated.cs" />
     <Compile Include="App_Data\Models\IconLinkItem.generated.cs" />
     <Compile Include="App_Data\Models\Image.generated.cs" />
     <Compile Include="App_Data\Models\Member.generated.cs" />

@@ -21,7 +21,7 @@ namespace Umbraco.Web.PublishedModels
 {
 	/// <summary>Home</summary>
 	[PublishedModel("home")]
-	public partial class Home : PublishedContentModel, IBackgroundControls, IContentControls, IFooterControls, ISEocontrols, IVisibilityControls
+	public partial class Home : PublishedContentModel, IBackgroundControls, IContentControls, IFooterControls, IHomepageControls, ISEocontrols, IVisibilityControls
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -71,6 +71,20 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
 		[ImplementPropertyType("socialLinks")]
 		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Web.PublishedModels.IconLinkItem> SocialLinks => global::Umbraco.Web.PublishedModels.FooterControls.GetSocialLinks(this);
+
+		///<summary>
+		/// Latest Video: Enter the link to the latest video
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
+		[ImplementPropertyType("latestVideo")]
+		public virtual string LatestVideo => global::Umbraco.Web.PublishedModels.HomepageControls.GetLatestVideo(this);
+
+		///<summary>
+		/// YouTube Channel Link: Enter the link to the YouTube channel
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.2")]
+		[ImplementPropertyType("youTubeChannelLink")]
+		public virtual string YouTubeChannelLink => global::Umbraco.Web.PublishedModels.HomepageControls.GetYouTubeChannelLink(this);
 
 		///<summary>
 		/// Meta Description: Enter the meta description for this page

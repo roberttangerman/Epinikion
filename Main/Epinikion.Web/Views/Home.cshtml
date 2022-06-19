@@ -10,8 +10,6 @@
 
 @Html.GetGridHtml(Model, "mainContent", "Clean", true, true)
 
-@Html.Partial("~/Views/Partials/showsList.cshtml")
-
 @Html.Partial("~/Views/Partials/articlesList.cshtml")
 
 <div class="row my-4">
@@ -23,3 +21,5 @@
         <p><a class="btn btn-outline-light" href="@youTubeChannel">@Umbraco.GetDictionaryValue("SubscribeYouTube")</a></p>
     </div>
 </div>
+
+@Html.Partial("~/Views/Partials/showsList.cshtml")
