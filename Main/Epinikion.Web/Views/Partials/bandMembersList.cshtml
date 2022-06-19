@@ -20,7 +20,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">@bandMember.MemberName</h5>
                                 <p class="card-text">@bandMember.IntroductionText</p>
-                                <a href="@bandMember.Url()" class="btn btn-outline-light stretched-link">Read more</a>
+                                <a href="@bandMember.Url()" class="btn btn-outline-light stretched-link">@Umbraco.GetDictionaryValue("Article.ReadMore")</a>
                             </div>
                             <div class="card-footer">
                                 <small class="text-muted">@bandMember.Instrument</small>

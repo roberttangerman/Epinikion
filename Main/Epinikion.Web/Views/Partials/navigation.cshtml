@@ -38,7 +38,7 @@
             </li>
             <li class="nav-item mt-4">
                 <a class="nav-link" href="https://shop.epinikion.org/" target="_blank">
-                    Shop
+                    @Umbraco.GetDictionaryValue("Navigation.Shop")
                 </a>
             </li>
             @foreach (IPublishedContent item in navItems.Skip(3))
