@@ -342,6 +342,7 @@
     <Content Include="Views\Article.cshtml" />
     <Content Include="Views\Band.cshtml" />
     <Content Include="Views\BandMember.cshtml" />
+    <Content Include="Views\Contact.cshtml" />
     <Content Include="Views\EPK.cshtml" />
     <Content Include="Views\Home.cshtml" />
     <Content Include="Views\MacroPartials\Quote.cshtml" />
@@ -363,6 +364,7 @@
     <Compile Include="App_Data\Models\Band.generated.cs" />
     <Compile Include="App_Data\Models\BandMember.generated.cs" />
     <Compile Include="App_Data\Models\BandMemberControls.generated.cs" />
+    <Compile Include="App_Data\Models\Contact.generated.cs" />
     <Compile Include="App_Data\Models\ContentControls.generated.cs" />
     <Compile Include="App_Data\Models\EPK.generated.cs" />
     <Compile Include="App_Data\Models\File.generated.cs" />

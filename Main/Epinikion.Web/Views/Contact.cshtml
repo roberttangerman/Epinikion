@@ -1,0 +1,27 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Umbraco.Web.PublishedModels.Contact>
+@using Epinikion.Core.Extensions;
+
+@{
+    Layout = "Master.cshtml";
+
+    Contact contact = Model.Root().Descendants<Contact>().FirstOrDefault();
+}
+
+<div class="row my-4">
+    <div class="col-12">
+        <h2 class="text-center display-3">@contact.Name</h2>
+    </div>
+    <form class="row">
+        <div class="mb-3">
+            <h3 class="display-6">
+                <label for="emailAddressInput" class="form-label">@Umbraco.GetDictionaryValue("Contact.Subscribe")</label>
+            </h3>
+            <input type="email" class="form-control" id="emailAddressInput" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary mb-3">@Umbraco.GetDictionaryValue("Subscribe.Submit")</button>
+        </div>
+    </form>
+</div>
+
+@Html.GetGridHtml(Model, "mainContent", "Clean", true, true)
