@@ -340,6 +340,8 @@
     <Content Include="css\style.css" />
     <Content Include="Global.asax" />
     <Content Include="Views\Article.cshtml" />
+    <Content Include="Views\Band.cshtml" />
+    <Content Include="Views\BandMember.cshtml" />
     <Content Include="Views\EPK.cshtml" />
     <Content Include="Views\Home.cshtml" />
     <Content Include="Views\MacroPartials\Quote.cshtml" />
@@ -347,6 +349,7 @@
     <Content Include="Views\News.cshtml" />
     <Content Include="Views\Page404.cshtml" />
     <Content Include="Views\Partials\articlesList.cshtml" />
+    <Content Include="Views\Partials\bandMembersList.cshtml" />
     <Content Include="Views\Partials\footer.cshtml" />
     <Content Include="Views\Partials\Grid\Clean.cshtml" />
     <Content Include="Views\Partials\navigation.cshtml" />
@@ -357,6 +360,9 @@
   <ItemGroup>
     <Compile Include="App_Data\Models\Article.generated.cs" />
     <Compile Include="App_Data\Models\BackgroundControls.generated.cs" />
+    <Compile Include="App_Data\Models\Band.generated.cs" />
+    <Compile Include="App_Data\Models\BandMember.generated.cs" />
+    <Compile Include="App_Data\Models\BandMemberControls.generated.cs" />
     <Compile Include="App_Data\Models\ContentControls.generated.cs" />
     <Compile Include="App_Data\Models\EPK.generated.cs" />
     <Compile Include="App_Data\Models\File.generated.cs" />

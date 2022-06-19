@@ -1,0 +1,10 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Umbraco.Web.PublishedModels.Band>
+@using Epinikion.Core.Extensions;
+
+@{
+	Layout = "Master.cshtml";
+}
+
+@Html.GetGridHtml(Model, "mainContent", "Clean", true, true)
+
+@Html.Partial("~/Views/Partials/bandMembersList.cshtml")
